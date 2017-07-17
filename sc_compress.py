@@ -58,10 +58,10 @@ def convert_pixel(pixels, type):
         return pixels
     
     elif type == 2:  # RGB4444
-        r = (96 >> 4) << 12
-        g = (96 >> 4) << 8
-        b = (80 >> 4) << 4
-        a = (160 >> 4) << 0
+        r = (pixels[0] >> 4) << 12
+        g = (pixels[1] >> 4) << 8
+        b = (pixels[2] >> 4) << 4
+        a = (pixels[3] >> 4)
         
         value = r | g | b | a
     
